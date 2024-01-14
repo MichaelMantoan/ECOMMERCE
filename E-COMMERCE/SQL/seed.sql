@@ -14,3 +14,6 @@ insert into ecommerce.users(email,password,role_id)values
 ('bob@gmail.com', SHA2('qwerty456', 256), 2),
 ('charlie@outlook.com', SHA2('letmein789', 256), 2),
 ('david@libero.it', SHA2('pass1234', 256), 1);
+
+insert into ecommerce.Carts(user_id)values
+(2);

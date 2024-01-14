@@ -5,6 +5,7 @@ require '../../models/classes.php';
 session_start();
 
 $products = Product::fetchAll();
+$user = $_SESSION['current_user'];
 ?>
 
 <html>
@@ -14,6 +15,9 @@ $products = Product::fetchAll();
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
         }
 
         ul {
@@ -22,13 +26,14 @@ $products = Product::fetchAll();
             margin: 10px 0;
             border: 1px solid #ddd;
             border-radius: 5px;
-            background-color: #f9f9f9;
+            background-color: #333333;
             width: 300px;
+            margin: 0 auto;
         }
 
         li {
             padding: 10px;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #555555;
         }
 
         form {
@@ -38,6 +43,20 @@ $products = Product::fetchAll();
         input {
             padding: 5px;
             margin-right: 5px;
+            background-color: #444444;
+            color: #ffffff;
+            border: 1px solid #555555;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
         }
 
         a {
@@ -53,6 +72,7 @@ $products = Product::fetchAll();
         a:hover {
             background-color: #45a049;
         }
+
 
     </style>
 </head>
@@ -77,7 +97,9 @@ $products = Product::fetchAll();
 
 <a href="../carts/index.php">Vai al carrello</a>
 
+<?php if ($user->GetRole_ID() == 2) : ?>
+    <a href="../admin/products/create.php">Aggiungi Prodotto</a>
+<?php endif ?>
 
-</body>
-</html>
+
 
