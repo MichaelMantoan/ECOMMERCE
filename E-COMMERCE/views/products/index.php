@@ -4,7 +4,7 @@ require '../../models/classes.php';
 
 session_start();
 
-$products = Product::fetchAll();
+$products = Product::FetchAll();
 $user = $_SESSION['current_user'];
 ?>
 

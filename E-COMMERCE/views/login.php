@@ -52,6 +52,7 @@
     <input type="text" name="email" placeholder="Email" required>
     <input type="password" name="password" placeholder="Password" required>
     <input type="submit" value="Invio">
+    <a href="../views/signup.php">Devi ancora iscriverti? Clicca qui</a>
 </form>
 </body>
 

@@ -49,6 +49,7 @@
             text-align: center;
         }
     </style>
+
 </head>
 
 <body>
@@ -58,7 +59,9 @@
     <input type="password" name="password" placeholder="Password" required>
     <input type="password" name="password-confirmation" placeholder="Conferma Password" required>
     <input type="submit" value="Invio">
+    <a href="../views/login.php">Sei già iscritto? Clicca qui</a>
 </form>
 </body>
 
 </html>
+
