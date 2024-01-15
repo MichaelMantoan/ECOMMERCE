@@ -87,7 +87,7 @@ $user = $_SESSION['current_user'];
     </ul>
 
     <form action="../../actions/add_to_cart.php" method="POST">
-        <input type="number" name="quantita" placeholder="quantita">
+        <input type="number" name="quantita" placeholder="quantita" min="1">
         <input type="hidden" name="product_id" value="<?php echo $product->getId(); ?>">
         <input type="submit" value="Aggiungi al carrello">
     </form>
